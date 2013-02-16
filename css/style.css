@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Stylesheet */
+
+#container {
+	margin: 0px auto;
+	width: 720px;
+	height: 480px;
+	background-color: grey;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
