@@ -1,13 +1,28 @@
 @charset "UTF-8";
 /* CSS Stylesheet */
 
-#container {
-	margin: 0px auto;
-	width: 720px;
-	height: 480px;
-	background-color: grey;
-	-webkit-transition: all .5s ease-in-out;
-	-moz-transition: all .5s ease-in-out;
-	-o-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;
+/* Page elements */
+
+#secondary {
+	height: auto;
+	padding: 5px 5px 5px 15px;
+}
+#video {
+	padding: 5px 15px 5px 5px;
+}
+#audio {
+	padding: 5px 5px 5px 5px;
+	height: auto;
+}
+#whatsthat {
+	padding: 5px 5px 5px 15px;
+	height: auto;
+}
+#dig {
+	padding: 5px 5px 5px 15px;
+	height: auto;
+}
+#chapters {
+	padding: 5px 5px 5px 5px;
+	height: 100px;
 }

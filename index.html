@@ -1,68 +1,147 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>John Heiss on Charles Ives</title>
-<script src="js/popcorn-complete.min.js"></script>
-<link rel="stylesheet" href="style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artists on Art: John Heiss on Charles Ives</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/popcorn-complete.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    var pop = Popcorn("#video");
+    var pop = Popcorn ("#video");
+			
+	pop.footnote({
+		start:'4',
+		end:'29',
+		text:'insert timeline of dates regarding Ives discovery by the public',
+		target:'secondary',
+	});	
+	
+	pop.wikipedia({
+		start:'17',
+		end:'28',
+		src:"http://wikipedia.org/wiki/Arnold_Schoenberg",
+		numberofwords:"30",
+		target:'whatsthat',
+	});
+	
+	pop.wikipedia({
+		start:'19',
+		end:'28',
+		src:"http://wikipedia.org/wiki/Igor_Stravinsky",
+		numberofwords:"30",
+		target:'whatsthat',
+	});
+	
+	pop.image({
+		start:'29',
+		end:'38',
+		src:'http://farm7.staticflickr.com/6180/6175584911_2199ac5265_d.jpg',
+		href:'http://www.flickr.com/photos/27770344@N02/6175584911/in/photostream/',
+		target:'secondary',
+	});
     
 	pop.footnote({
-		start:'1', // Our start time in seconds
-		end:'6', // Our end time in seconds
-		text:"Hello world!", // The text we want to display
-		target:'box', // What DOM element we want to target on the page
+		start:'0:38',
+		end:'1:05',
+		text:'<a href="http://open.spotify.com/track/6aZR1yOrVr9lhF7OCZ9sGL" target="_blank"><i class="icon-music"></i>Listen on Spotify: General William Booth Enters Into Heaven</a>',
+		target:'audio',
+	});	
+	
+	pop.wikipedia({
+		start:'1:28',
+		end:'2:05',
+		src:"http://wikipedia.org/wiki/Aaron_Copland",
+		numberofwords:"30",
+		target:'whatsthat',
 	});
-
-	pop.image({
-		start:'6.1', // Our start time in seconds
-		end:'9', // Our end time in seconds
-		src: "img/cat.jpg",
-		target:'box', // What DOM element we want to target on the page
-		effect: "applyclass", // Apply a CSS class to the target container
-		/* applyclass: "flip, black, move_down", // Specify which CSS class */
-	});
-
-	pop.image({
-		start:'9.1', // Our start time in seconds
-		end:'12', // Our end time in seconds
-		src: "img/cat.jpg",
-		target:'container', // What DOM element we want to target on the page
-		effect: "applyclass", // Apply a CSS class to the target container
-		/* applyclass: "flip, black, move_down", // Specify which CSS class */
-	});
-
-	pop.googlemap({
-		start: 13,
-		end: 19,
-		type: "ROADMAP",
-		target: "box",
-		lat: 43.665429,
-		lng: -79.403323,
-		zoom: 5,
-	});
-
-	pop.webpage({
-		id: "webpages-a",
-		start: 5,
-		end: 25,
-		src: "http://itp.nyu.edu/itp/",
-		target: "container"
-	});
-
+	
 });
+
 </script>
 </head>
 
-<body>
+<body>	
 
-	<div id="container">
-		<video id="video" controls>
-  			<source src="video/video_ThreePlaces.mp4">
-		</video>
-	</div>	
+<!--Header-->
+
+	<div class="row-fluid" align="center">
+    	<h3><em>Artists on Art</em>: John Heiss on Charles Ives</h3>
+    </div>
+    
+<!--Chapters-->
+
+	<div class="row-fluid" align="center">
+    	<div class="span3">
+        	<button class="btn" type="button">A Life with Ives</button>
+        </div>
+        <div class="span3">
+        	<button class="btn" type="button">Discovery</button>
+        </div>
+        <div class="span3">
+        	<button class="btn" type="button">His Music is About Us</button>
+        </div>
+        <div class="span3">
+        	<button class="btn" type="button">Influence</button>
+        </div>
+    </div>
+<!--End Chapters-->
+
+<!--Content-->
+
+	<div class="row-fluid">
+    
+<!--Left Column-->
+
+        <div class="span6">
+       
+<!--Secondary Screen-->
+
+			<div id="secondary">
+			</div>
+        
+<!--Audio Embeds and Links-->
+
+			<div id="audio">
+        	</div>
+            
+	</div>
+<!--End Left Column-->
+  
+<!--Right Column-->
+
+    	<div class="span6">
+
+<!--The Video-->	
+	
+			<div id="video">
+        		<video id="video" controls width="100%" height="auto">
+  				<source src="video/video_Discovery.mp4">
+				</video>
+        	</div>
+
+<!--What's That?-->
+
+			<h4>What's That?</h4>
+            <div id="whatsthat">
+			</div>
+        
+<!--Dig Deeper-->
+
+			<h4>Dig Deeper</h4>
+            <div id="dig">
+			</div>
+            
+		</div>
+<!--End Right Column-->
+
+	</div>
+
+
 
 </body>
 </html>
