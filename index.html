@@ -12,29 +12,29 @@
 <link rel="stylesheet" href="css/bootstrap-responsive.css" />
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    var pop = Popcorn ("#video");
+    var pop = Popcorn ("#video_Discovery");
 			
 	pop.footnote({
 		start:'4',
-		end:'29',
+		end:'18',
 		text:'insert timeline of dates regarding Ives discovery by the public',
 		target:'secondary',
 	});	
 	
 	pop.wikipedia({
-		start:'17',
-		end:'28',
+		start:'18',
+		end:'29',
 		src:"http://wikipedia.org/wiki/Arnold_Schoenberg",
 		numberofwords:"30",
-		target:'whatsthat',
+		target:'secondary',
 	});
 	
 	pop.wikipedia({
 		start:'19',
-		end:'28',
+		end:'29',
 		src:"http://wikipedia.org/wiki/Igor_Stravinsky",
 		numberofwords:"30",
-		target:'whatsthat',
+		target:'secondary',
 	});
 	
 	pop.image({
@@ -48,8 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	pop.footnote({
 		start:'0:38',
 		end:'1:05',
-		text:'<a href="http://open.spotify.com/track/6aZR1yOrVr9lhF7OCZ9sGL" target="_blank"><i class="icon-music"></i>Listen on Spotify: General William Booth Enters Into Heaven</a>',
+		text:'<a href="http://open.spotify.com/track/6aZR1yOrVr9lhF7OCZ9sGL" target="_blank"><i class="icon-music"></i> Listen on Spotify: General William Booth Enters Into Heaven</a>',
 		target:'audio',
+	});	
+	
+	pop.footnote({
+		start:'0:38',
+		end:'1:05',
+		text:'add image of score for music and also audio embed playing excerpt',
+		target:'secondary',
 	});	
 	
 	pop.wikipedia({
@@ -57,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		end:'2:05',
 		src:"http://wikipedia.org/wiki/Aaron_Copland",
 		numberofwords:"30",
-		target:'whatsthat',
+		target:'secondary',
 	});
 	
 });
@@ -106,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
 <!--Audio Embeds and Links-->
 
-			<div id="audio">
+			<div id="audio" align="center">
         	</div>
             
 	</div>
@@ -119,20 +126,18 @@ document.addEventListener("DOMContentLoaded", function () {
 <!--The Video-->	
 	
 			<div id="video">
-        		<video id="video" controls width="100%" height="auto">
+        		<video id="video_Discovery" controls width="100%" height="auto">
   				<source src="video/video_Discovery.mp4">
 				</video>
         	</div>
 
 <!--What's That?-->
 
-			<h4>What's That?</h4>
             <div id="whatsthat">
 			</div>
         
 <!--Dig Deeper-->
 
-			<h4>Dig Deeper</h4>
             <div id="dig">
 			</div>
             
