@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artists on Art: John Heiss on Charles Ives - A Life with Ives</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+
+<script src="js/jquery.js"></script>
+<script src="js/popcorn-complete.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+
+$(function () {
+	
+	var pop = Popcorn.youtube ("#video", "http://youtu.be/2yGqrWHqq68" );
+
+	var popToggle = function(name, start, end) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+		$elem.removeClass("hidden").detach();
+
+		pop.code({
+			start: start,
+			end: end,
+			onStart: function() {
+				$elem.appendTo($parent);
+			},
+			onEnd: function() {
+				$elem.detach();
+			}
+		});	
+	};
+	
+	
+	var popEnd = function(name, start) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+
+		pop.code({
+			start: start,
+			onStart: function() {
+				$elem.detach();
+				$elem.removeClass("hidden").detach();
+			}
+		});	
+	};
+	
+	popToggle("#heissbio", '1', '23');
+	
+	pop.wikipedia({
+		start:'6',
+		end:'23',
+		src:"http://en.wikipedia.org/wiki/New_England_Conservatory",
+		title:"New England Conservatory (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"50",
+		target:'text',
+	});
+	
+	pop.wikipedia({
+		start:'23',
+		end:'1:22',
+		src:"http://en.wikipedia.org/wiki/Charles_ives",
+		title:"Charles Ives (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+	});
+	
+	popToggle("#ivessociety", '1:22', '1:31')
+	
+	popToggle("#ivesangels", '1:31', '2:08')
+	
+	pop.wikipedia({
+		start:'2:50',
+		end:'2:58',
+		src:"http://en.wikipedia.org/wiki/Boston_Musica_Viva",
+		title:"Boston Musica Viva (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"30",
+		target:'text',
+	});
+	
+	pop.wikipedia({
+		start:'2:52',
+		end:'2:58',
+		src:"http://en.wikipedia.org/wiki/Boston_symphony",
+		title:"Boston Symphony Orchestra (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"30",
+		target:'text',
+	});
+	
+	pop.footnote({
+		start:'2:18',
+		end:'2:27',
+		text:"I'm not Mr. Ives!",
+		target:'bigtext',
+	});
+	
+	popEnd("#video", '3:21.5');
+	popToggle("#continue", '3:21.5');
+	
+});
+
+</script>
+</head>
+
+<body>	
+
+<!--Header-->
+
+	<div class="row-fluid" align="center">
+    	<h3><a href="index.html"><em>Artists on Art</em>: John Heiss on Charles Ives</a></h3>
+    </div>
+    
+<!--Chapters-->
+
+	<div class="row-fluid" align="center" style="margin:0 0 25px 0;">
+          <div class="span3">
+              <a href="alifewithives.html"><button class="btn btn-large btn-warning" type="button">A Life with Ives</button></a>
+          </div>
+          <div class="span3">
+              <a href="discovery.html"><button class="btn btn-large" type="button">Discovery</button></a>
+          </div>
+          <div class="span3">
+              <a href="threeplaces.html"><button class="btn btn-large" type="button">His Music is About Us</button></a>
+          </div>
+          <div class="span3">
+              <a href="influence.html"><button class="btn btn-large" type="button">Influence</button></a>
+          </div>
+    </div>
+    
+<!--End Chapters-->
+
+<!--Content-->
+
+	<div class="row-fluid">
+    
+<!--Left Column-->
+
+        <div class="span6">
+       
+<!--Secondary Screen-->
+
+            <div id="secondary" align="center">
+            	<div id="text" align="left" style="width:100%; max-width:480px; float:right;">
+                	<div id="heissbio">
+                    	<p>John Heiss is an active composer, conductor, flutist, and teacher. His works have been performed worldwide, receiving premieres by Speculum Musicae, Boston Musica Viva, Collage New Music, the Da Capo Chamber Players, Aeolian Chamber Players, Tanglewood Festival Orchestra, and Alea III. He has received awards and commissions from the National Institute of Arts and Letters, Fromm Foundation, NEA, Rockefeller Foundation, Massachusetts Council on the Arts and Humanities, ASCAP, and the Guggenheim Foundation.</p>
+
+<p>Heiss has been principal flute of Boston Musica Viva and has performed with many local ensembles, including the BSO.</p>
+
+<p>Starting in the 1970s, Heiss has directed many NEC festivals dedicated to composers or themes, and has spearheaded visits to NEC by many composers, including Ligeti, Lutoslawski, Berio, Carter, Messiaen, Schuller, and Tippett.</p>
+
+<p>Learn more at <a href="http://www.necmusic.edu/faculty/john-heiss?lid=2&sid=3" target="_blank">New England Conservatory <i class="icon-share-alt"></i></a></p>
+                	</div>
+                    <div id="ivessociety">
+                    	<p>John Heiss is currently on the Board of Directors of the <a href="http://www.charlesives.org/05about.htm">Charles Ives Society. <i class="icon-share-alt"></i></a></p>
+                    </div>
+                    <div id="ivesangels">
+                    	<h4>Ives "Angels"</h4>
+                        <ul>
+                        	<li>Gunther Schuller <a href="http://en.wikipedia.org/wiki/Gunther_Schuller" target="_blank">Learn More <i class="icon-share-alt"></i></a></li>
+                            	<ul><li>A composer, conductor, horn player, author, historian, and jazz musician.</li></ul>
+                            <li>James Sinclair <a href="http://maestrojamessinclair.com/" target="_blank">Learn More <i class="icon-share-alt"></i></a></li>
+                            	<ul><li>A conductor who has <a href="http://music.yale.edu/norfolk/blog/?p=1370" target="_blank">"spent [his] whole adult life devoted to the music of Charles Ives."</a></li></ul>
+                            <li>John Kirkpatrick</li>
+                            	<ul><li>A pianist who premiered the "Concord Sonata" and other Ives works.</li></ul>
+                            <li>Michael Tilson Thomas <a href="http://www.michaeltilsonthomas.com/Home.aspx" target="_blank">Learn More <i class="icon-share-alt"></i></a></li>
+                            	<ul><li>Music Director of the San Francisco Symphony, Founder and Artistic Director of the New World Symphony and Principal Guest Conductor of the London Symphony Orchestra. </li></ul>
+                            <li>Leonard Bernstein <a href="http://www.leonardbernstein.com/" target="_blank">Learn More <i class="icon-share-alt"></i></a></li>
+                            	<ul><li>Composer, conductor, author, music lecturer, and pianist. He was among the first conductors born and educated in the United States of America to receive worldwide acclaim.</li></ul>
+                            <li>Helen Boatwright</li>
+                            	<ul><li>Soprano who specialized in the performance of American song, recorded the first full-length album of songs by composer Charles Ives and had a career that spanned more than five decades.</li></ul>
+                            <li>Jan DeGaetani <a href="http://en.wikipedia.org/wiki/Jan_DeGaetani" target="_blank">Learn More <i class="icon-share-alt"></i></a></li>
+                            	<ul><li>Mezzo-soprano known for her performances of contemporary classical vocal compositions.</li></ul>
+                            <li>Gilbert Kalish <a href="http://www.stonybrook.edu/commcms/music/aboutus/faculty/kalish_gilbert.html" target="_blank">Learn More <i class="icon-share-alt"></i></a></li>
+                            	<ul><li>Pianist and Professor at SUNY Stony Brook.</li></ul>
+                            <li>Stephen Drury <a href="http://www.stephendrury.com/" target="_blank">Learn More <i class="icon-share-alt"></i></a></li>
+                            	<ul><li>Pianist, conductor, and electronic musician.</li></ul>
+                      </ul>
+                    </div>
+                    <div id="bigtext" style="font-size:24px">
+                    	</div>
+            	</div>
+			</div>
+        
+<!--Audio Embeds and Links-->
+
+			<div id="audio" align="center" style="width:100%; max-width:480px; float:right;">
+            	
+        	</div>
+	</div>
+    
+<!--End Left Column-->
+  
+<!--Right Column-->
+
+    	<div class="span6" align="center">
+        
+<!--The Video-->
+
+			<div id="video" class="video"></div>
+            <div id="continue" class="continue">
+            	<h3><a href="discovery.html"><i class="icon-share-alt icon-white"></i> Continue to next chapter...</a>
+                <br/><a href="alifewithives.html"><i class="icon-share-alt icon-white"></i> or replay this chapter.</a></h3>
+            </div>
+            
+		</div>
+        
+<!--End Right Column-->
+
+	</div>
+    
+<!--End Content-->
+
+</body>
+</html>

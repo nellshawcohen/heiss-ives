@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artists on Art: John Heiss on Charles Ives - Influence</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+
+<script src="js/jquery.js"></script>
+<script src="js/popcorn-complete.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+
+$(function () {
+	
+	var pop = Popcorn.youtube ("#video", "http://youtu.be/qt4eIOhNa6k" );
+
+	var popToggle = function(name, start, end) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+		$elem.removeClass("hidden").detach();
+
+		pop.code({
+			start: start,
+			end: end,
+			onStart: function() {
+				$elem.appendTo($parent);
+			},
+			onEnd: function() {
+				$elem.detach();
+			}
+		});	
+	};
+	
+	
+	var popEnd = function(name, start) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+
+		pop.code({
+			start: start,
+			onStart: function() {
+				$elem.detach();
+				$elem.removeClass("hidden").detach();
+			}
+		});	
+	};
+	
+	popToggle("#mozart", '7', '35');
+	
+	pop.wikipedia({
+		start:'13',
+		end:'35',
+		src:"http://en.wikipedia.org/wiki/Lobet_den_Herrn,_alle_Heiden",
+		title:"J.S. Bach, Lobet den Herrn, alle Heiden (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"0",
+		target:'text',
+	});
+	
+	pop.wikipedia({
+		start:'38',
+		end:'51',
+		src:"http://wikipedia.org/wiki/Arnold_Schoenberg",
+		title:"Arnold Schoenberg (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+	});
+	
+	pop.wikipedia({
+		start:'51',
+		end:'57',
+		src:"http://en.wikipedia.org/wiki/Gunther_Schuller",
+		title:"Gunther Schuller (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"10",
+		target:'text',
+	});
+	
+	pop.wikipedia({
+		start:'1:28',
+		end:'1:45',
+		src:"http://wikipedia.org/wiki/Igor_Stravinsky",
+		title:"Igor Stravinsky (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+	});
+	
+	popToggle("#4shortpieces", '1:45', '2:05');	
+	
+	popToggle("#Op19", '1:55', '2:05');	
+	
+	pop.wikipedia({
+		start:'2:05',
+		end:'2:29',
+		src:"http://en.wikipedia.org/wiki/Variations_(Stravinsky)",
+		title:"Variations for Orchestra (Stravinsky) (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"20",
+		target:'text',
+	});
+	
+	pop.wikipedia({
+		start:'2:21',
+		end:'2:29',
+		src:"http://en.wikipedia.org/wiki/Robert_Craft",
+		title:"Robert Craft (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"20",
+		target:'text',
+	});
+	
+	popToggle("#DecorationDay", '2:29', '3:49');
+	
+	pop.wikipedia({
+		start:'2:29',
+		end:'3:49',
+		src:"http://en.wikipedia.org/wiki/A_Symphony:_New_England_Holidays",
+		title:"Holidays Symphony (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+	});
+	
+	popEnd("#video", '4:00.5');
+	popToggle("#continue", '4:00.5');
+	
+});
+
+</script>
+</head>
+
+<body>	
+
+<!--Header-->
+
+	<div class="row-fluid" align="center">
+    	<h3><a href="index.html"><em>Artists on Art</em>: John Heiss on Charles Ives</a></h3>
+    </div>
+    
+<!--Chapters-->
+
+	<div class="row-fluid" align="center" style="margin:0 0 25px 0;">
+          <div class="span3">
+              <a href="alifewithives.html"><button class="btn btn-large" type="button">A Life with Ives</button></a>
+          </div>
+          <div class="span3">
+              <a href="discovery.html"><button class="btn btn-large" type="button">Discovery</button></a>
+          </div>
+          <div class="span3">
+              <a href="threeplaces.html"><button class="btn btn-large" type="button">His Music is About Us</button></a>
+          </div>
+          <div class="span3">
+              <a href="influence.html"><button class="btn btn-large btn-warning" type="button">Influence</button></a>
+          </div>
+    </div>
+    
+<!--End Chapters-->
+
+<!--Content-->
+
+	<div class="row-fluid">
+    
+<!--Left Column-->
+
+        <div class="span6">
+       
+<!--Secondary Screen-->
+
+			<div id="secondary" align="center">
+            	<div id="text" align="left" style="width:100%; max-width:480px; float:right;">
+                	<div id="mozart"><p>In the course of 1782 and 1783, Mozart became intimately acquainted with the work of Johann Sebastian Bach and George Frideric Handel as a result of the influence of Gottfried van Swieten, who owned many manuscripts of the Baroque masters. Mozart's study of these scores inspired compositions in Baroque style, and later influenced his personal musical language, for example in fugal passages in Die Zauberflöte ("The Magic Flute") and the finale of Symphony No. 41. <a href="http://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart#Early_years" target="_blank">(Wikipedia) <i class=icon-share-alt></i></a></p>
+                    </div>
+                    <br />
+                </div>
+			</div>
+        
+	</div>
+    
+<!--End Left Column-->
+  
+<!--Right Column-->
+
+    	<div class="span6" align="center">
+        
+<!--The Video-->
+
+			<div id="video" class="video"></div>
+            <div id="continue" class="continue">
+            	<h3><a href="index.html"><i class="icon-share-alt icon-white"></i> Go back to the beginning...</a>
+                <br/><a href="influence.html"><i class="icon-share-alt icon-white"></i> or replay this chapter.</a></h3>
+            </div>
+            
+<!--Audio Embeds and Links-->
+
+			<div id="audio" align="center" style="width:100%; max-width:480px;">
+            	<div id="4shortpieces">
+                	<p><br /><i class="icon-music"></i> <strong>Listen</strong> to John Heiss' <em>Four Short Pieces for Piano</em> <a href="http://www.allmusic.com/performance/short-pieces-4-for-piano-ensemble-mq0001414475" target="_blank">[allmusic <i class="icon-share-alt"></i>]</a></p>
+                </div>
+                <div id="Op19">
+                	<p><i class="icon-music"></i> <strong>Listen</strong> to Arnold Schoenberg's <em>Sechs Kleine Klavierstücke, Op. 19</em> <a href="http://open.spotify.com/track/53Cq2r0A0Qp9U5e2GOGjfV" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>
+                </div>
+                <div id="DecorationDay">
+                	<p><br /><i class="icon-music"></i> <strong>Listen</strong> to Ives' <em>Holidays Symphony - Decoration Day</em> <a href="http://open.spotify.com/track/7dDvjh17gq3EvDMhLZhj5I" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>
+                </div>
+        	</div>
+            
+		</div>
+        
+<!--End Right Column-->
+
+	</div>
+    
+<!--End Content-->
+
+</body>
+</html>

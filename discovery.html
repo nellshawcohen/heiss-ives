@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artists on Art: John Heiss on Charles Ives - Discovery</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+
+<script src="js/jquery.js"></script>
+<script src="js/popcorn-complete.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+
+$(function () {
+	
+	var pop = Popcorn.youtube ("#video", "http://youtu.be/22eySGR7qpI" );
+
+	var popToggle = function(name, start, end) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+		$elem.removeClass("hidden").detach();
+
+		pop.code({
+			start: start,
+			end: end,
+			onStart: function() {
+				$elem.appendTo($parent);
+			},
+			onEnd: function() {
+				$elem.detach();
+			}
+		});	
+	};
+	
+	
+	var popEnd = function(name, start) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+
+		pop.code({
+			start: start,
+			onStart: function() {
+				$elem.detach();
+				$elem.removeClass("hidden").detach();
+			}
+		});	
+	};
+	
+	popToggle("#timeline", '4', '18');
+	
+	pop.wikipedia({
+		start:'18',
+		end:'29',
+		src:"http://wikipedia.org/wiki/Arnold_Schoenberg",
+		title:"Arnold Schoenberg (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+	});
+	
+	pop.wikipedia({
+		start:'19',
+		end:'29',
+		src:"http://wikipedia.org/wiki/Igor_Stravinsky",
+		title:"Igor Stravinsky (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+	});
+	
+	pop.image({
+		start:'29',
+		end:'38',
+		src:'http://farm7.staticflickr.com/6180/6175584911_2199ac5265_d.jpg',
+		href:'http://www.flickr.com/photos/27770344@N02/6175584911/in/photostream/',
+		target:'secondary',
+	});
+
+	popToggle("#GeneralBooth", '38', '1:30');
+	
+	pop.wikipedia({
+		start:'1:30',
+		end:'2:05',
+		src:"http://wikipedia.org/wiki/Aaron_Copland",
+		title:"Aaron Copland (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+	});
+	
+	popEnd("#video", '2:09.2');
+	popToggle("#continue", '2:09.2');
+	
+});
+
+</script>
+</head>
+
+<body>	
+
+<!--Header-->
+
+	<div class="row-fluid" align="center">
+    	<h3><a href="index.html"><em>Artists on Art</em>: John Heiss on Charles Ives</a></h3>
+    </div>
+    
+<!--Chapters-->
+
+	<div class="row-fluid" align="center" style="margin:0 0 25px 0;">
+          <div class="span3">
+              <a href="alifewithives.html"><button class="btn btn-large" type="button">A Life with Ives</button></a>
+          </div>
+          <div class="span3">
+              <a href="discovery.html"><button class="btn btn-large btn-warning" type="button">Discovery</button></a>
+          </div>
+          <div class="span3">
+              <a href="threeplaces.html"><button class="btn btn-large" type="button">His Music is About Us</button></a>
+          </div>
+          <div class="span3">
+              <a href="influence.html"><button class="btn btn-large" type="button">Influence</button></a>
+          </div>
+    </div>
+    
+<!--End Chapters-->
+
+<!--Content-->
+
+	<div class="row-fluid">
+    
+<!--Left Column-->
+
+        <div class="span6">
+       
+<!--Secondary Screen-->
+
+			<div id="secondary" align="center">
+            	<div id="text" align="left" style="width:100%; max-width:480px; float:right;">
+            		<div id="timeline">
+                    <h4>The Delayed Public Discovery of Charles Ives:</h4>
+                    	<ul>
+                        	<br /><li><strong>1887</strong>, Charles Ives writes his first song "Slow March" at age 12.</li>
+                            <br /><li><strong>1892-1912</strong>, the majority of Ives' works are composed.</li>
+                            <br /><li><strong>mid-1920s</strong>, Ives virtually ceases to write new music.</li>
+                            <br /><li><strong>1939</strong>, premiere of <em>Piano Sonata No. 2, Concord, Mass. 1840-60</em> approximately 24 years after Ives completed it. Ives is awarded the Pulitzer Prize for this work the following year.</li>
+                            <br /><li><strong>1954</strong>, Ives dies at age 79.</li>
+                            <br /><li><strong>1962</strong>, John Heiss hears Ives' music for the first time. He would begin digging into the music in the mid-1970s.</li>
+                         </ul>
+                	</div>
+                </div>
+			</div>
+        
+	</div>
+    
+<!--End Left Column-->
+  
+<!--Right Column-->
+
+    	<div class="span6" align="center">
+        
+<!--The Video-->
+
+			<div id="video" class="video"></div>
+            <div id="continue" class="continue">
+            	<h3><a href="threeplaces.html"><i class="icon-share-alt icon-white"></i> Continue to next chapter...</a>
+                <br/><a href="discovery.html"><i class="icon-share-alt icon-white"></i> or replay this chapter.</a></h3>
+            </div>
+            
+<!--Audio Embeds and Links-->
+
+			<div id="audio" align="center" style="width:100%; max-width:480px;">
+            	<div id="GeneralBooth"><iframe width="360" height="50" src="http://www.youtube.com/embed/SnbGruNIV1o?rel=0&autoplay=1" frameborder="0"></iframe>
+                	<p><small><em>General William Booth Enters Into Heaven</em> by Charles Ives</small></p>
+                	<p><i class="icon-music"></i> <strong>Listen</strong> to a version of this song recorded by soprano Helen Boatwright, one of the first champions of Ives' music <a href="http://open.spotify.com/track/6aZR1yOrVr9lhF7OCZ9sGL" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>
+                    <p><i class="icon-eye-open"></i> <strong>Read</strong> the poem that inspired the song <a href="http://www.poetryfoundation.org/poetrymagazine/poem/1834" target="_blank">[Poetry Foundation <i class="icon-share-alt"></i>]</a></p>
+                </div>
+        	</div>
+            
+		</div>
+        
+<!--End Right Column-->
+
+	</div>
+    
+<!--End Content-->
+
+</body>
+</html>
