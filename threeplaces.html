@@ -57,6 +57,8 @@ $(function () {
 		title:"Three Places in New England (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"100",
 		target:'text',
+		effect: "applyclass",
+		applyclass: "fade_in",
 	});
 	
 	popToggle("#ThreePlaces1", '21', '1:26');
@@ -67,6 +69,8 @@ $(function () {
 		src:'http://upload.wikimedia.org/wikipedia/en/thumb/7/7b/St_GaudensShaw_Mem.jpg/640px-St_GaudensShaw_Mem.jpg',
 		href:'http://en.wikipedia.org/wiki/Robert_Gould_Shaw_Memorial',
 		target:'secondary',
+		effect: "applyclass",
+		applyclass: "fade_in",
 	});
 	
 	pop.wikipedia({
@@ -75,7 +79,9 @@ $(function () {
 		src:"http://en.wikipedia.org/wiki/Robert_Gould_Shaw_Memorial",
 		title:"Robert Gould Shaw Memorial (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"30",
-		target:'secondary',
+		target:'text',
+		effect: "applyclass",
+		applyclass: "fade_in",
 	});
 	
 	popToggle("#ThreePlaces2", '1:26', '2:33');
@@ -88,20 +94,26 @@ $(function () {
 		src:'http://farm5.staticflickr.com/4060/4221655971_ab2a78a2b2.jpg',
 		href:'http://www.flickr.com/photos/el_ramon/4221655971/',
 		target:'secondary',
+		effect: "applyclass",
+		applyclass: "fade_in",
+
 	});
 	
 	popToggle("#HousatonicSong", '4:37', '4:49');
 	
-	<!-- not working
-	<!--pop.image({
-	<!--	start:'4:37',
-	<!--	end:'4:51',
-	<!--	src:'img/score_HousatonicSong.jpg',
-		<!--target:'secondary',
-	<!--}); -->
+	pop.image({
+	  start:'4:37',
+	  end:'4:51',
+	  src:'img/score_HousatonicSong.png',
+	  target:'secondary',
+	  effect: "applyclass",
+	  applyclass: "fade_in",
+	});
 	
 	popEnd("#video", '4:49');
 	popToggle("#continue", '4:49');
+	
+	pop.play()
 	
 });
 
@@ -145,8 +157,8 @@ $(function () {
        
 <!--Secondary Screen-->
 
-			<div id="secondary" align="center">
-            	<div id="text" align="left" style="width:100%; max-width:480px; float:right;"></div>
+			<div id="secondary" class="not_faded">
+            	<div id="text" class="not_faded text"></div>
 			</div>
 
 	</div>
@@ -168,24 +180,30 @@ $(function () {
                     
 <!--Audio Embeds and Links-->
 
-			<div id="audio" align="center" style="width:100%; max-width:480px;">
+			<div id="audio" class="audio">
             	<div id="ThreePlaces1">
                 	<audio controls="controls" autoplay="autoplay">
-                    	<source src="audio/audio_ThreePlaces1.mp3" type="audio/mpeg">Your browser does not support the audio tag.
+                    	<source src="audio/audio_ThreePlaces1.mp3" type="audio/mpeg">
+                        <source src="audio/audio_ThreePlaces1.ogg" type="audio/ogg">
+                        Your browser does not support the audio tag.
                     </audio>
                 	<p><small>Excerpt: <em>Three Places in New England - I. The "St. Gaudens" in Boston Common (Col. Shaw and his Colored Regiment)</em> by Charles Ives</small></p>
                     <p><i class="icon-music"></i> <strong>Listen</strong> to complete recording of this movement <a href="http://open.spotify.com/track/4wpYa9fPiT5o4rkQEJSF2U" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>
                 </div>
             	<div id="ThreePlaces2">
                 	<audio controls autoplay>
-                    	<source src="audio/audio_ThreePlaces2.mp3" type="audio/mpeg">Your browser does not support the audio tag.
+                    	<source src="audio/audio_ThreePlaces2.mp3" type="audio/mpeg">
+                        <source src="audio/audio_ThreePlaces2.ogg" type="audio/ogg">
+                        Your browser does not support the audio tag.
                     </audio>
                 	<p><small>Excerpt: <em>Three Places in New England - II. Putnam's Camp, Redding, Connecticut</em> by Charles Ives</small></p>
                     <p><i class="icon-music"></i> <strong>Listen</strong> to complete recording of this movement <a href="http://open.spotify.com/track/2GZKDuZdwOla6fm0lD8AWJ" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>
                 </div>
             	<div id="ThreePlaces3">
                 	<audio controls autoplay>
-                    	<source src="audio/audio_ThreePlaces3.mp3" type="audio/mpeg">Your browser does not support the audio tag.
+                    	<source src="audio/audio_ThreePlaces3.mp3" type="audio/mpeg">
+                        <source src="audio/audio_ThreePlaces3.ogg" type="audio/ogg">
+                        Your browser does not support the audio tag.
                     </audio>
                 	<p><small>Excerpt: <em>Three Places in New England - III. The Housatonic at Stockbridge</em> by Charles Ives</small></p>
                     <p><i class="icon-music"></i> <strong>Listen</strong> to complete recording of this movement <a href="http://open.spotify.com/track/1Jv6gUw5X03GgbdiD0E5rZ" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>

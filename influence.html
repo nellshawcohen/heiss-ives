@@ -58,7 +58,9 @@ $(function () {
 		src:"http://en.wikipedia.org/wiki/Lobet_den_Herrn,_alle_Heiden",
 		title:"J.S. Bach, Lobet den Herrn, alle Heiden (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"0",
-		target:'text',
+		target:'text1',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	pop.wikipedia({
@@ -67,7 +69,9 @@ $(function () {
 		src:"http://wikipedia.org/wiki/Arnold_Schoenberg",
 		title:"Arnold Schoenberg (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"100",
-		target:'text',
+		target:'text1',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	pop.wikipedia({
@@ -76,7 +80,9 @@ $(function () {
 		src:"http://en.wikipedia.org/wiki/Gunther_Schuller",
 		title:"Gunther Schuller (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"10",
-		target:'text',
+		target:'text2',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	pop.wikipedia({
@@ -85,7 +91,9 @@ $(function () {
 		src:"http://wikipedia.org/wiki/Igor_Stravinsky",
 		title:"Igor Stravinsky (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"100",
-		target:'text',
+		target:'text1',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	popToggle("#4shortpieces", '1:45', '2:05');	
@@ -98,7 +106,9 @@ $(function () {
 		src:"http://en.wikipedia.org/wiki/Variations_(Stravinsky)",
 		title:"Variations for Orchestra (Stravinsky) (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"20",
-		target:'text',
+		target:'text1',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	pop.wikipedia({
@@ -107,22 +117,28 @@ $(function () {
 		src:"http://en.wikipedia.org/wiki/Robert_Craft",
 		title:"Robert Craft (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"20",
-		target:'text',
+		target:'text2',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	popToggle("#DecorationDay", '2:29', '3:49');
 	
 	pop.wikipedia({
-		start:'2:29',
+		start:'2:30',
 		end:'3:49',
 		src:"http://en.wikipedia.org/wiki/A_Symphony:_New_England_Holidays",
 		title:"Holidays Symphony (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"100",
-		target:'text',
+		target:'text1',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	popEnd("#video", '4:00.5');
 	popToggle("#continue", '4:00.5');
+	
+	pop.play()
 	
 });
 
@@ -166,11 +182,10 @@ $(function () {
        
 <!--Secondary Screen-->
 
-			<div id="secondary" align="center">
-            	<div id="text" align="left" style="width:100%; max-width:480px; float:right;">
-                	<div id="mozart"><p>In the course of 1782 and 1783, Mozart became intimately acquainted with the work of Johann Sebastian Bach and George Frideric Handel as a result of the influence of Gottfried van Swieten, who owned many manuscripts of the Baroque masters. Mozart's study of these scores inspired compositions in Baroque style, and later influenced his personal musical language, for example in fugal passages in Die Zauberflöte ("The Magic Flute") and the finale of Symphony No. 41. <a href="http://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart#Early_years" target="_blank">(Wikipedia) <i class=icon-share-alt></i></a></p>
-                    </div>
-                    <br />
+			<div id="secondary">
+            	<div id="text1" class="not_faded text"></div>
+                <div id="text2" class="not_faded text"></div>
+                <div id="mozart" class="text"><p>In the course of 1782 and 1783, Mozart became intimately acquainted with the work of Johann Sebastian Bach and George Frideric Handel as a result of the influence of Gottfried van Swieten, who owned many manuscripts of the Baroque masters. Mozart's study of these scores inspired compositions in Baroque style, and later influenced his personal musical language, for example in fugal passages in Die Zauberflöte ("The Magic Flute") and the finale of Symphony No. 41. <a href="http://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart#Early_years" target="_blank">(Wikipedia) <i class=icon-share-alt></i></a></p>
                 </div>
 			</div>
         
@@ -192,7 +207,7 @@ $(function () {
             
 <!--Audio Embeds and Links-->
 
-			<div id="audio" align="center" style="width:100%; max-width:480px;">
+			<div id="audio" class="audio">
             	<div id="4shortpieces">
                 	<p><br /><i class="icon-music"></i> <strong>Listen</strong> to John Heiss' <em>Four Short Pieces for Piano</em> <a href="http://www.allmusic.com/performance/short-pieces-4-for-piano-ensemble-mq0001414475" target="_blank">[allmusic <i class="icon-share-alt"></i>]</a></p>
                 </div>

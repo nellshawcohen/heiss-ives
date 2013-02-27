@@ -4,14 +4,32 @@
 /* Page elements */
 
 #secondary {
-	height: auto;
+	align:center;
+	height:auto;
+	max-height:100px;
 	padding: 5px 5px 5px 15px;
 }
-#secondary text {
-	align:left; 
+/* transitions are not inherited -- apply to specific div of content */
+.not_faded {
+	opacity:0;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+.fade_in {
+	opacity:1 !important;
+}
+.text {
+	text-align:left; 
 	width:100%; 
-	max-width:360px; 
+	max-width:480px; 
 	float:right;
+}
+.audio {
+	width:100%; 
+	max-width:480px;
+	align:center;
 }
 #secondary timeline {
 	align:left; 
@@ -20,10 +38,11 @@
 	float:right;
 }
 #video {
-	padding: 5px 5px 5px 5px;
+	padding: 0px 5px 5px 5px;
 	width:100%; 
-	max-width:480px; 
-	height:360px;
+	height:100%; 
+	max-width:720px; 
+	height:480px;
 	color:#FFF;
 }
 #continue {

@@ -49,7 +49,7 @@ $(function () {
 			}
 		});	
 	};
-	
+
 	popToggle("#timeline", '4', '18');
 	
 	pop.wikipedia({
@@ -58,7 +58,9 @@ $(function () {
 		src:"http://wikipedia.org/wiki/Arnold_Schoenberg",
 		title:"Arnold Schoenberg (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"100",
-		target:'text',
+		target:'text1',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	pop.wikipedia({
@@ -67,7 +69,9 @@ $(function () {
 		src:"http://wikipedia.org/wiki/Igor_Stravinsky",
 		title:"Igor Stravinsky (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"100",
-		target:'text',
+		target:'text2',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	pop.image({
@@ -76,6 +80,8 @@ $(function () {
 		src:'http://farm7.staticflickr.com/6180/6175584911_2199ac5265_d.jpg',
 		href:'http://www.flickr.com/photos/27770344@N02/6175584911/in/photostream/',
 		target:'secondary',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 
 	popToggle("#GeneralBooth", '38', '1:30');
@@ -86,11 +92,15 @@ $(function () {
 		src:"http://wikipedia.org/wiki/Aaron_Copland",
 		title:"Aaron Copland (Wikipedia) <i class=icon-share-alt></i>",
 		numberofwords:"100",
-		target:'text',
+		target:'text1',
+		effect: "applyclass",
+        applyclass: "fade_in",
 	});
 	
 	popEnd("#video", '2:09.2');
 	popToggle("#continue", '2:09.2');
+	
+	pop.play()
 	
 });
 
@@ -134,20 +144,20 @@ $(function () {
        
 <!--Secondary Screen-->
 
-			<div id="secondary" align="center">
-            	<div id="text" align="left" style="width:100%; max-width:480px; float:right;">
-            		<div id="timeline">
-                    <h4>The Delayed Public Discovery of Charles Ives:</h4>
-                    	<ul>
-                        	<br /><li><strong>1887</strong>, Charles Ives writes his first song "Slow March" at age 12.</li>
-                            <br /><li><strong>1892-1912</strong>, the majority of Ives' works are composed.</li>
-                            <br /><li><strong>mid-1920s</strong>, Ives virtually ceases to write new music.</li>
-                            <br /><li><strong>1939</strong>, premiere of <em>Piano Sonata No. 2, Concord, Mass. 1840-60</em> approximately 24 years after Ives completed it. Ives is awarded the Pulitzer Prize for this work the following year.</li>
-                            <br /><li><strong>1954</strong>, Ives dies at age 79.</li>
-                            <br /><li><strong>1962</strong>, John Heiss hears Ives' music for the first time. He would begin digging into the music in the mid-1970s.</li>
-                         </ul>
-                	</div>
-                </div>
+			<div id="secondary" class="not_faded">
+            	<div id="text1" class="not_faded text"></div>
+                <div id="text2" class="not_faded text"></div>
+                        <div id="timeline" class="text">
+                        <h4>The Delayed Public Discovery of Charles Ives:</h4>
+                            <ul>
+                                <br /><li><strong>1887</strong>, Charles Ives writes his first song "Slow March" at age 12.</li>
+                                <br /><li><strong>1892-1912</strong>, the majority of Ives' works are composed.</li>
+                                <br /><li><strong>mid-1920s</strong>, Ives virtually ceases to write new music.</li>
+                                <br /><li><strong>1939</strong>, premiere of <em>Piano Sonata No. 2, Concord, Mass. 1840-60</em> approximately 24 years after Ives completed it. Ives is awarded the Pulitzer Prize for this work the following year.</li>
+                                <br /><li><strong>1954</strong>, Ives dies at age 79.</li>
+                                <br /><li><strong>1962</strong>, John Heiss hears Ives' music for the first time. He would begin digging into the music in the mid-1970s.</li>
+                             </ul>
+                        </div>
 			</div>
         
 	</div>
@@ -168,11 +178,12 @@ $(function () {
             
 <!--Audio Embeds and Links-->
 
-			<div id="audio" align="center" style="width:100%; max-width:480px;">
-            	<div id="GeneralBooth"><iframe width="360" height="50" src="http://www.youtube.com/embed/SnbGruNIV1o?rel=0&autoplay=1" frameborder="0"></iframe>
-                	<p><small><em>General William Booth Enters Into Heaven</em> by Charles Ives</small></p>
-                	<p><i class="icon-music"></i> <strong>Listen</strong> to a version of this song recorded by soprano Helen Boatwright, one of the first champions of Ives' music <a href="http://open.spotify.com/track/6aZR1yOrVr9lhF7OCZ9sGL" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>
-                    <p><i class="icon-eye-open"></i> <strong>Read</strong> the poem that inspired the song <a href="http://www.poetryfoundation.org/poetrymagazine/poem/1834" target="_blank">[Poetry Foundation <i class="icon-share-alt"></i>]</a></p>
+			<div id="audio" align="center" class="audio">
+            	<div id="GeneralBooth">
+                  <iframe width="360" height="50" src="http://www.youtube.com/embed/SnbGruNIV1o?rel=0&autoplay=1" frameborder="0"></iframe>
+                      <p><small><em>General William Booth Enters Into Heaven</em> by Charles Ives</small></p>
+                      <p><i class="icon-music"></i> <strong>Listen</strong> to a version of this song recorded by soprano Helen Boatwright, one of the first champions of Ives' music <a href="http://open.spotify.com/track/6aZR1yOrVr9lhF7OCZ9sGL" target="_blank">[Spotify <i class="icon-share-alt"></i>]</a></p>
+                      <p><i class="icon-eye-open"></i> <strong>Read</strong> the poem that inspired the song <a href="http://www.poetryfoundation.org/poetrymagazine/poem/1834" target="_blank">[Poetry Foundation <i class="icon-share-alt"></i>]</a></p>
                 </div>
         	</div>
             
