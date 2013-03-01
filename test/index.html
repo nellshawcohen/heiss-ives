@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+
+<!-- Link to Popcorn -->
+
+<script src="js/popcorn-complete.js"></script>
+<script src="../js/jquery.js"></script>
+<!-- The Style -->
+
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Pop the Corn -->
+
+<script>
+
+$(function () {
+	
+	var pop = Popcorn ("#video");
+
+	var popToggle = function(name, start, end) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+		$elem.removeClass("hidden").detach();
+
+		pop.code({
+			start: start,
+			end: end,
+			onStart: function() {
+				$elem.appendTo($parent);
+			},
+			onEnd: function() {
+				$elem.detach();
+			}
+		});	
+	};
+	
+	
+	var popEnd = function(name, start) {
+		var $elem = $(name);
+		var $parent = $elem.parent();
+
+		pop.code({
+			start: start,
+			onStart: function() {
+				$elem.detach();
+				$elem.removeClass("hidden").detach();
+			}
+		});	
+	};
+	
+	pop.wikipedia({
+		start:'1',
+		end:'21',
+		src:"http://en.wikipedia.org/wiki/Three_Places_in_New_England",
+		title:"Three Places in New England (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"100",
+		target:'text',
+		effect: "applyclass",
+		applyclass: "fade_in",
+	});
+	
+	popToggle("#ThreePlaces1", '21', '1:26');
+	
+	pop.image({
+		start:'1',
+		end:'1:26',
+		src:'http://upload.wikimedia.org/wikipedia/en/thumb/7/7b/St_GaudensShaw_Mem.jpg/640px-St_GaudensShaw_Mem.jpg',
+		href:'http://en.wikipedia.org/wiki/Robert_Gould_Shaw_Memorial',
+		target:'drawer',
+		effect: "applyclass",
+		applyclass: "drawerisout",
+	});
+	
+	pop.wikipedia({
+		start:'27',
+		end:'1:26',
+		src:"http://en.wikipedia.org/wiki/Robert_Gould_Shaw_Memorial",
+		title:"Robert Gould Shaw Memorial (Wikipedia) <i class=icon-share-alt></i>",
+		numberofwords:"30",
+		target:'text',
+		effect: "applyclass",
+		applyclass: "fade_in",
+	});
+	
+	popToggle("#ThreePlaces2", '1:26', '2:33');
+	
+	popToggle("#ThreePlaces3", '2:33', '4:37');
+	
+	pop.image({
+		start:'2:33',
+		end:'4:37',
+		src:'http://farm5.staticflickr.com/4060/4221655971_ab2a78a2b2.jpg',
+		href:'http://www.flickr.com/photos/el_ramon/4221655971/',
+		target:'secondary',
+		effect: "applyclass",
+		applyclass: "fade_in",
+
+	});
+	
+	popToggle("#HousatonicSong", '4:37', '4:49');
+	
+	pop.image({
+	  start:'4:37',
+	  end:'4:51',
+	  src:'img/score_HousatonicSong.png',
+	  target:'secondary',
+	  effect: "applyclass",
+	  applyclass: "fade_in",
+	});
+	
+	popEnd("#video", '4:49');
+	popToggle("#continue", '4:49');
+	
+	pop.play()
+	
+});
+
+</script>
+</head>
+
+<!-- The Body -->
+
+<body>	
+
+<!-- The Container -->
+
+	
+	
+<!--The Video-->		
+
+		<video id="video" class="heiss" controls>
+  			<source src="../video/video_from_youtube.mp4" type="video/mp4">
+		</video>
+
+<!--The Content Box-->
+
+			<div id="secondary" class="not_faded 8clear">
+            	<div id="text" class="not_faded text"></div>
+			</div>
+			<div id="drawer" class="offtotheright">
+			</div>
+
+<!-- End Body -->
+
+</body>
+</html>
