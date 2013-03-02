@@ -47,19 +47,10 @@ $(function () {
     }); 
   };
   
-  popToggle("#mozart", '7', '35');
+  popToggle("#mozart", '7', '13');
   
-  pop.wikipedia({
-    start:'13',
-    end:'35',
-    src:"http://en.wikipedia.org/wiki/Lobet_den_Herrn,_alle_Heiden",
-    title:"J.S. Bach, Lobet den Herrn, alle Heiden (Wikipedia) <i class=icon-share-alt></i>",
-    numberofwords:"0",
-    target:'popup-left',
-    effect: "applyclass",
-    applyclass: "slidein-left",
-  });
-  
+  popToggle("#bach", '13', '35');
+
   pop.wikipedia({
     start:'38',
     end:'50',
@@ -183,6 +174,10 @@ $(function () {
 
 <!--Audio Embeds & Links-->
 
+  <div id="bach" class="slideout-right">
+    <iframe width="360" height="50" src="http://www.youtube.com/embed/0Oqk9xoIsWg?rel=0&autoplay=0" frameborder="0"></iframe>
+      <p><small><em>Lobet den Herrn, den mächtigen König der Ehren</em> by J.S. Bach</small></p>
+  </div>
   <div id="4shortpieces" class="slideout-right">
     <p><i class="icon-music icon-white"></i> <strong>Listen</strong> to John Heiss' <em>Four Short Pieces for Piano</em> <a href="http://www.allmusic.com/performance/short-pieces-4-for-piano-ensemble-mq0001414475" target="_blank">[allmusic <i class="icon-share-alt icon-white"></i>]</a></p>
     <p><i class="icon-music icon-white"></i> <strong>Listen</strong> to Arnold Schoenberg's <em>Sechs Kleine Klavierstücke, Op. 19</em> <a href="http://open.spotify.com/track/53Cq2r0A0Qp9U5e2GOGjfV" target="_blank">[Spotify <i class="icon-share-alt icon-white"></i>]</a></p>

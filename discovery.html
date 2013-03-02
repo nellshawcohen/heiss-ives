@@ -81,11 +81,11 @@ $(function () {
     applyclass: "popin",
   });
 
-  popToggle("#GeneralBooth", '38', '1:30');
+  popToggle("#GeneralBooth", '38', '1:29');
   
   pop.wikipedia({
     start:'1:30',
-    end:'2:05',
+    end:'2:06',
     src:"http://wikipedia.org/wiki/Aaron_Copland",
     title:"Aaron Copland (Wikipedia) <i class=icon-share-alt></i>",
     numberofwords:"50",
@@ -93,7 +93,11 @@ $(function () {
     effect: "applyclass",
     applyclass: "slidein-left",
   });
+
+  popToggle("#Copland", '1:30', '1:42');
   
+  popToggle("#Sym3", '1:43', '2:06');
+
   popToggle("#continue", '2:09.2');
   
   pop.play()
@@ -144,10 +148,21 @@ $(function () {
 <!--Audio Embeds & Links-->
 
   <div id="GeneralBooth" class="slideout-right">
-    <iframe width="360" height="50" src="http://www.youtube.com/embed/SnbGruNIV1o?rel=0&autoplay=1" frameborder="0"></iframe>
-        <p><small><em>General William Booth Enters Into Heaven</em> by Charles Ives</small></p>
+    <iframe width="360" height="50" src="http://www.youtube.com/embed/SnbGruNIV1o?rel=0&autoplay=0" frameborder="0"></iframe>
+        <p><small><em>General William Booth Enters Into Heaven</em> (1914) by Charles Ives</small></p>
         <p><i class="icon-music icon-white"></i> <strong>Listen</strong> to a version of this song recorded by soprano Helen Boatwright, one of the first champions of Ives' music <a href="http://open.spotify.com/track/6aZR1yOrVr9lhF7OCZ9sGL" target="_blank">[Spotify <i class="icon-share-alt icon-white"></i>]</a></p>
         <p><i class="icon-eye-open icon-white"></i> <strong>Read</strong> the poem that inspired the song <a href="http://www.poetryfoundation.org/poetrymagazine/poem/1834" target="_blank">[Poetry Foundation <i class="icon-share-alt icon-white"></i>]</a></p>
+  </div>
+
+  <div id="Copland" class="slideout-right">
+    <iframe width="360" height="300" src="http://www.youtube.com/embed/SXikDnYZYpM?rel=0&autoplay=0" frameborder="0"></iframe>
+      <p><small><em>Rodeo: Four Dance Episodes </em>(1942) by Aaron Copland</small></p>
+  </div>
+
+  <div id="Sym3" class="slideout-right">
+  <iframe width="360" height="50" src="http://www.youtube.com/embed/Qq3r8iNBzk0?rel=0&autoplay=0" frameborder="0"></iframe>
+      <p><small><em>Symphony No. 3 - III. Communion</em> (1910) by Charles Ives</small></p>
+      <p><i class="icon-music icon-white"></i> <strong>Listen</strong> to a version of this symphony recorded by Leonard Bernstein, one of the great conductors of Ives's music <a href="http://open.spotify.com/track/2pkWdRDElrBjpevwf75Mnb" target="_blank">[Spotify <i class="icon-share-alt icon-white"></i>]</a></p>
   </div>
 
 </div>
