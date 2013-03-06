@@ -70,7 +70,7 @@ a:focus {
 .header {
 	z-index: 3 !important;
 	width: 100%;
-	position: absolute;
+  position: fixed;
 	top: -45px;
 	padding: 5px 25px 0px 25px;
 	background-color: #666699;
@@ -91,7 +91,7 @@ a:focus {
 }
 .slideout-right {
 	z-index: 2 !important;
-	position: absolute;
+  position: fixed;
 	width: 35%;
 	max-width: 360px;
 	min-width: 100px;
@@ -104,14 +104,14 @@ a:focus {
 	top: -50px;
 	right: 0px;
 	opacity: 0;
-	-moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .slideout-left {
 	z-index: 2 !important;
-	position: absolute;
+  position: fixed;
 	width: 35%;
 	max-width: 360px;
 	min-width: 100px;
@@ -124,10 +124,10 @@ a:focus {
 	top: -50px;
 	left: 0px;
 	opacity: 0;
-	-moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .slidein-right {
 	top: 50px;
