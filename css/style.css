@@ -170,16 +170,27 @@ a:focus {
     transition: all .5s ease-in-out;
 }
 .popin {  /* not working! */
-	z-index: 1 !important;
-	width: 60%;
-	max-width: 600px;
-	height: auto;
-	height: auto;
-	opacity: 1;
+  z-index: 1 !important;
+  width: 60%;
+  max-width: 600px;
+  height: auto;
+  height: auto;
+  opacity: 1;
+  -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.popin img {  /* not working! */
+  width: 100%;
+  opacity: .8;
 	-moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+}
+.popin img:hover {
+  opacity: 1;
 }
 
 
