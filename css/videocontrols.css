@@ -1,0 +1,42 @@
+#video-controls {
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	left: 0px;
+	right: 0px;
+	padding: 5px;
+	opacity: .4;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	transition: opacity .3s;
+	background-color: #666699;
+}
+
+#video-controls:hover {
+	opacity: 1;
+}
+
+button {
+	background: #fff;
+	border: 0;
+	color: #000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+#seek-bar {
+	width: 360px;
+	padding: 0 0 -10px 0;
+}
+
+#volume-bar {
+	width: 60px;
+}
