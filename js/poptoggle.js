@@ -30,12 +30,14 @@ var popToggle = function(name, start, end, slide) {
     // Handle when the item should be shown
     onStart: function() {
       // We insert the element back into the page where it came from
-      var $slideElem = $elem.appendTo($parent);
+      // We also clone the element to make sure that any media attributes
+      // (like the autoplay attribute on the audio tag) are respected.
+      $elem = $elem.clone(true).appendTo($parent);
 
       // We wait a tiny amount of time (1ms) in order for the CSS
       // transition to take effect when we add in the slidein class
       setTimeout(function() {
-        $slideElem.addClass(slide);
+        $elem.addClass(slide);
       }, 1);
     },
 
